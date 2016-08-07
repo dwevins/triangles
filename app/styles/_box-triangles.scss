@@ -1,0 +1,23 @@
+.outer {
+  position: relative;
+  width: 5rem;
+  height: 2.5rem;
+  overflow: hidden;
+
+  &__1 {
+    border: 1px solid black;
+  }
+}
+
+.inner {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  transform: translate(-50%, -50%) rotate(45deg);
+
+  &__1 {
+    border: 1px solid red;
+  }
+}
