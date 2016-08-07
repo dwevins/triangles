@@ -1,0 +1,58 @@
+.arrow-solid{
+  width: 0;
+  height: 0;
+  border-left: 3rem solid transparent;
+  border-right: 3rem solid transparent;
+  border-bottom: 3rem solid black;
+}
+
+.arrow-spin {
+  width: 0;
+  height: 0;
+  border-left: 3rem solid transparent;
+  border-right: 3rem solid transparent;
+  border-bottom: 3rem solid black;
+}
+
+.arrow-color-change {
+  width: 0;
+  height: 0;
+  border-left: 3rem solid transparent;
+  border-right: 3rem solid transparent;
+  border-bottom: 3rem solid black;
+  animation: colorShift 5s linear infinite;
+}
+
+@keyframes colorShift {
+  0%, 100% {border-bottom-color: cyan;}
+  25% {border-bottom-color: magenta;}
+  50% {border-bottom-color: yellow;}
+  75% {border-bottom-color: black;}
+}
+
+.arrow-hover-size {
+  width: 0;
+  height: 0;
+  border-left: 3rem solid transparent;
+  border-right: 3rem solid transparent;
+  border-bottom: 3rem solid black;
+  transition: border-right-width 0.5s ease-out, border-left-width 0.5s ease-out, border-bottom-width 0.5s ease-out;
+/*   transition-timing-function: ease-out; */
+}
+
+.arrow-hover-size:hover {
+  border-right-width: 5rem;
+  border-left-width: 5rem;
+  border-bottom-width: 5rem;
+}
+
+.arrow-hover-background {
+  width: 0;
+  height: 0;
+  border-left: 3rem solid transparent;
+  border-right: 3rem solid transparent;
+  border-bottom: 3rem solid black;
+
+  border-bottom-color: linear-gradient(to bottom, red 50%, black 50%);
+
+}
