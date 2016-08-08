@@ -46,11 +46,41 @@
 </div>
 
 <p>okay, but what about changing the shape of the triangle?</p>
-<p>using hard sized for inner means changing them every time you need a different shape</p>
+<p>using hard sizes for inner means changing them every time you need a different shape</p>
 <p>can it be done with percentages?</p>
 
 <div class="outer outer__3">
-  <div class="inner-pct__1">
+  <div class="inner inner-pct__1">
+    <div class="slider"></div>
+  </div>
+</div>
+
+<p>cool. so what happens when you change the outer div in an attempt to edit the inner?</p>
+<p>let's just maintain outer's aspect ratio for now.</p>
+
+<div class="outer outer__4">
+  <div class="inner inner-pct__1">
+    <div class="slider"></div>
+  </div>
+</div>
+
+<p>looks like you can scale this triangle!</p>
+<p>how about a different aspect ratio?</p>
+<div class="outer outer__5">
+  <div class="inner inner-pct__1">
+    <div class="slider"></div>
+  </div>
+</div>
+
+<p>...oops.</p>
+<p>so it looks like this triangle math only works for parent</p>
+<p>divs with a 2:1 width:height ratio.</p>
+<p>so what now?</p>
+<p>can the triangle's shape be changed?</p>
+<p>try skew:</p>
+
+<div class="outer outer__6">
+  <div class="inner inner-pct__2">
     <div class="slider"></div>
   </div>
 </div>
