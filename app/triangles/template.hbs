@@ -1,111 +1,113 @@
 <div class="container">
-  <p>solid triangle</p>
-  <div class="wrapper">
-    <div class="arrow-solid"></div>
-  </div>
-
-  <p>spinning solid</p>
-  <div class="arrow-spin fa fa-spin"></div>
-
-  <p>color-changing</p>
-  <div class="arrow-color-change"></div>
-
-  <p>change size on hover</p>
-  <div class="arrow-hover-size"></div>
-
-  <p>change border background on hover</p>
-  <div class="arrow-hover-background"></div>
-  <p>
-    ...nevermind, working with border-image is cumbersome,
-    and animating it even more so.
-  </p>
-
-  <h2>NEW TACTIC</h2>
-  <p>
-    use nested divs and overflow:hidden to make triangles
-    that can be styled like divs!
-  </p>
-
-  <div class="outer outer__1">
-    <div class="inner inner__1"></div>
-  </div>
-
-  <p>now let's get that slide-in working</p>
-
-  <div class="outer outer__2">
-    <div class="inner inner__2">
+  <div class="content">
+    <p>solid triangle</p>
+    <div class="wrapper">
+      <div class="arrow-solid"></div>
     </div>
-  </div>
 
-  <p>great! now get the background correct:</p>
+    <p>spinning solid</p>
+    <div class="arrow-spin fa fa-spin"></div>
 
-  <div class="outer outer__2">
-    <div class="inner inner__3">
-      <div class="slider"></div>
+    <p>color-changing</p>
+    <div class="arrow-color-change"></div>
+
+    <p>change size on hover</p>
+    <div class="arrow-hover-size"></div>
+
+    <p>change border background on hover</p>
+    <div class="arrow-hover-background"></div>
+    <p>
+      ...nevermind, working with border-image is cumbersome, and animating it even more so.
+    </p>
+
+    <h2>NEW TACTIC</h2>
+    <p>
+      use nested divs and overflow:hidden to make triangles that can be styled like divs!
+    </p>
+
+    <div class="outer outer__1">
+      <div class="inner inner__1"></div>
     </div>
-  </div>
 
-  <p>okay, what about changing the shape of the triangle?</p>
-  <p>using hard sizes for inner means changing them every time you need a different shape</p>
-  <p>can it be done with percentages?</p>
+    <p>now let's get that slide-in working</p>
 
-  <div class="outer outer__3">
-    <div class="inner inner-pct__1">
-      <div class="slider"></div>
+    <div class="outer outer__2">
+      <div class="inner inner__2">
+      </div>
     </div>
-  </div>
 
-  <p>cool. so what happens when you change the outer div in an attempt to edit the inner?</p>
-  <p>let's just maintain outer's aspect ratio for now.</p>
+    <p>great! now get the background correct:</p>
 
-  <div class="outer outer__4">
-    <div class="inner inner-pct__1">
-      <div class="slider"></div>
+    <div class="outer outer__2">
+      <div class="inner inner__3">
+        <div class="slider"></div>
+      </div>
     </div>
-  </div>
 
-  <p>looks like you can scale this triangle!</p>
-  <p>how about a different aspect ratio?</p>
-  <div class="outer outer__5">
-    <div class="inner inner-pct__1">
-      <div class="slider"></div>
+    <p>okay, what about changing the shape of the triangle?</p>
+    <p>using hard sizes for inner means changing them every time you need a different shape</p>
+    <p>can it be done with percentages?</p>
+
+    <div class="outer outer__3">
+      <div class="inner inner-pct__1">
+        <div class="slider"></div>
+      </div>
     </div>
-  </div>
 
-  <p>...oops.</p>
-  <p>so it looks like this triangle math only works for parent</p>
-  <p>divs with a 2:1 width:height ratio.</p>
-  <p>so what now?</p>
-  <p>can the triangle's shape be changed?</p>
-  <p>try skew:</p>
+    <p>cool. so what happens when you change the outer div in an attempt to edit the inner?</p>
+    <p>let's just maintain outer's aspect ratio for now.</p>
 
-  <div class="outer outer__3">
-    <div class="inner inner-pct__2">
-      <div class="slider"></div>
+    <div class="outer outer__4">
+      <div class="inner inner-pct__1">
+        <div class="slider"></div>
+      </div>
     </div>
-  </div>
 
-  <p>okay, how about skewing while maintaining the triangle?</p>
-
-
-  <div class="outer outer__3">
-    <div class="inner inner-pct__3">
-      <div class="slider"></div>
+    <p>looks like you can scale this triangle!</p>
+    <p>how about a different aspect ratio?</p>
+    <div class="outer outer__5">
+      <div class="inner inner-pct__1">
+        <div class="slider"></div>
+      </div>
     </div>
+
+    <p>...oops.</p>
+    <p>so it looks like this triangle math only works for parent</p>
+    <p>divs with a 2:1 width:height ratio.</p>
+    <p>so what now?</p>
+    <p>can the triangle's shape be changed?</p>
+    <p>try skew:</p>
+
+    <div class="outer outer__3">
+      <div class="inner inner-pct__2">
+        <div class="slider"></div>
+      </div>
+    </div>
+
+    <p>okay, how about skewing while maintaining the triangle?</p>
+
+
+    <div class="outer outer__3">
+      <div class="inner inner-pct__3">
+        <div class="slider"></div>
+      </div>
+    </div>
+
+    <p>okay, that changed the angle! had to move inner to keep the triangle inside outer.</p>
+    <p>also, this method still relies on editing inner, rather than outer.</p>
+    <p>additionally, this should only work for creating isosceles triangles.</p>
+
+    <h2>THOUGHTS BEFORE CONTINUING</h2>
+
+    <p>it seems that, before making more triangles, the relationship between</p>
+    <p>outer height, outer width, inner height, inner width, and inner skew</p>
+    <p>need to be examined.</p>
+    <p>as of right now, we can create right (largest angle is 90 degrees)</p>
+    <p>and isosceles (2 sides of equal length) triangles.</p>
+    <p>for the right triangle, having inner's width be 70% of outer's width</p>
+    <p>and inner's height be 140% of outer's height will work in cases</p>
+    <p>where outer's width is twice its height.</p>
+    <p>work in cases</p>
+    <p>where outer's width is twice its height.</p>
   </div>
-
-  <p>okay, that changed the angle! had to move inner to keep the triangle inside outer.</p>
-  <p>also, this method still relies on editing inner, rather than outer.</p>
-  <p>additionally, this should only work for creating isosceles triangles.</p>
-
-  <h2>THOUGHTS BEFORE CONTINUING</h2>
-
-  <p>it seems that, before making more triangles, the relationship between</p>
-  <p>outer height, outer width, inner height, inner width, and inner skew</p>
-  <p>need to be examined.</p>
-  <p>as of right now, we can create right (largest angle is 90 degrees)</p>
-  <p>and isosceles (2 sides of equal length) triangles.</p>
-  <p>for the right triangle, having inner's width be 70% of outer's width</p>
-  <p>and inner's height be 140% of outer's height will work in cases</p>
-  <p>where outer's width is twice its height.</p>
-  </div>
+</div>
