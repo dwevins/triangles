@@ -12,6 +12,10 @@
   &__2 {
     border-bottom: 1px solid black;
   }
+
+  &__3 {
+    border: 1px solid black;
+  }
 }
 
 .inner {
@@ -41,6 +45,13 @@
   &__3 {
     border: 1px solid black;
     background-color: white;
+  }
+
+  &-pct {
+
+    &__1 {
+      border: 1px solid red;
+    }
   }
 }
 
