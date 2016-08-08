@@ -10,7 +10,7 @@ ul {
 .container {
   display: flex;
   justify-content: center;
-  width: calc(100% - $gutter);
+  width: calc(100% - #{$gutter});
   max-width: $max-content;
   margin: 0 auto;
 }
