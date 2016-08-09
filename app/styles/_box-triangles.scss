@@ -6,27 +6,33 @@
   margin: 1rem 0;
 
   &__1 {
-    border: 1px solid black;
+    border: $outerBorder;
   }
 
   &__2 {
-    border-bottom: 1px solid black;
+    border-bottom: $outerBorder;
   }
 
   &__3 {
-    border: 1px solid black;
+    border: $outerBorder;
   }
 
   &__4 {
-    border: 1px solid black;
+    border: $outerBorder;
     width: 3rem;
     height: 1.5rem;
   }
 
   &__5 {
-    border: 1px solid black;
+    border: $outerBorder;
     width: 3rem;
     height: 4rem;
+  }
+
+  &__6 {
+    border: $outerBorder;
+    width: calc(#{$z1} * #{$x1});
+    height: calc(#{$y1} * #{$x1});
   }
 }
 
@@ -39,11 +45,11 @@
   transform: translate(-50%, -50%) rotate(45deg);
 
   &__1 {
-    border: 1px solid red;
+    border: $innerBorder;
   }
 
   &__2 {
-    border: 1px solid black;
+    border: $outerBorder;
     background-size: 100% 200%;
     background-image: linear-gradient(to bottom, red 50%, green 50%);
     background-position: 0% 0%;
@@ -55,26 +61,33 @@
   }
 
   &__3 {
-    border: 1px solid black;
+    border: $outerBorder;
     background-color: white;
   }
 
   &-pct {
 
     &__1 {
-      border: 1px solid red;
+      border: $innerBorder;
       width: 70%;
       height: 140%;
     }
 
     &__2 {
-      border: 1px solid red;
+      border: $innerBorder;
       transform: translate(-50%, -50%) rotate(45deg) skew(10deg, 3deg);
     }
 
     &__3 {
-      border: 1px solid red;
+      border: $innerBorder;
       transform: translate(-50%, -35%) rotate(45deg) skew(10deg, 10deg);
+    }
+  }
+
+  &-calc {
+
+    &__1 {
+      border: $innerBorder;
     }
   }
 }
@@ -95,7 +108,7 @@
 
 //css for compressing square into rhombus
 // .outer {
-//   border: 1px solid black;
+//   border: $outerBorder;
 //   height: 5rem;
 //   width: 5rem;
 //   margin-top: 10rem;

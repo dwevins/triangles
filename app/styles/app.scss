@@ -1,6 +1,10 @@
 $max-content: 60rem;
 $gutter: 1rem;
-
+$x1: 5rem;
+$y1: 1.5;
+$z1: 0.8;
+$outerBorder: 1px solid black;
+$innerBorder: 1px solid red;
 @import 'font-awesome';
 @import 'resets';
 @import 'border-triangles';

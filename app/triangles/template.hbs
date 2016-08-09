@@ -107,7 +107,23 @@
       for the right triangle, having inner's width be 70% of outer's width
       and inner's height be 140% of outer's height will work in cases
       where outer's width is twice its height.
-      work in cases
-      where outer's width is twice its height.</p>
+      work in cases where outer's width is twice its height.</p>
+
+    <p>after doing the math, it looks like the relationship between inner's height and width
+      and outer's height and width can be modeled as such:</p>
+    <ul>
+      <li>x is a base side length used to define outer as a square</li>
+      <li>y is an integer multiplied to x to modify outerHeight</li>
+      <li>z is an integer multiplied to x to modify outerWidth</li>
+      <li>innerHeight = (0.7(outerHeight) / y)</li>
+      <li>innerWidth = (0.7(outerWidth) / z)</li>
+    </ul>
+
+    <p>considering that, let's look at an outer that is taller than it is wide. x = 5rem, y = 1.5, z = 0.8.</p>
+
+    <div class="outer outer__6">
+      <div class="inner inner-calc__1">
+      </div>
+    </div>
   </div>
 </div>
