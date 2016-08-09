@@ -33,6 +33,7 @@
     border: $outerBorder;
     width: calc(#{$z1} * #{$x1});
     height: calc(#{$y1} * #{$x1});
+    overflow: visible;
   }
 }
 
@@ -88,6 +89,8 @@
 
     &__1 {
       border: $innerBorder;
+      width: calc((0.7 * #{$x1}) / #{$z1});
+      height: calc((0.7 * #{$x1}) / #{$y1});
     }
   }
 }
